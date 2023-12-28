@@ -42,8 +42,8 @@
 
     - name: Copy user service
       ansible.builtin.copy:
-        src: user.service
-        dest: /etc/systemd/system/user.service
+        src: user.service.j2
+        dest: /etc/systemd/system/user.service.j2
 
     - name: deamon realod and start
       ansible.builtin.systemd_service:
